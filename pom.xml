@@ -11,6 +11,8 @@
     <modules>
         <module>threadpool2</module>
         <module>lock</module>
+        <module>classloader</module>
+        <module>nio</module>
     </modules>
 
 
