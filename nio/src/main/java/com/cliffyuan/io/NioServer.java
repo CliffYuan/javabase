@@ -1,4 +1,4 @@
-package com.cliffyuan.nio;
+package com.cliffyuan.io;
 
 import javax.net.ServerSocketFactory;
 import java.io.IOException;
@@ -14,8 +14,14 @@ import java.util.Set;
 /**
  * 绑定端口
  * 注意：
+ *
+ * （0）必须设置flip()，否则读取得的数据无法使用
  * （1）设置serverSocketChannel的阻塞模式，只对serverSocketChannel.accept()方法起作用。
  * （2）设置socketChannel.configureBlocking(false);只对socketChannel.read()和wirte（）方法起作用
+ *
+ *
+ *
+ *
  * Created by yuanyuanming on 14-7-10.
  */
 public class NioServer {

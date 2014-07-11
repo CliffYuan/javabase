@@ -1,4 +1,4 @@
-package com.cliffyuan.nio;
+package com.cliffyuan.io;
 
 import java.io.IOError;
 import java.io.IOException;
@@ -11,6 +11,8 @@ import java.nio.channels.SocketChannel;
  * 建立远程连接
  * 注意点：
  * （1）必须设置flip()，否则数据无法写入
+ *
+ *
  *
  * Created by yuanyuanming on 14-7-10.
  */
