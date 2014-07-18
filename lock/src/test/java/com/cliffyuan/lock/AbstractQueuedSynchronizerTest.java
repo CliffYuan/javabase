@@ -1,5 +1,6 @@
 package com.cliffyuan.lock;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -8,6 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class AbstractQueuedSynchronizerTest {
 
     private ReentrantLock lock=new ReentrantLock();
+
+    private Condition condition=lock.newCondition();
 
     public static void main(String[] args) {
 
@@ -22,9 +25,16 @@ public class AbstractQueuedSynchronizerTest {
     public void testLock(){
         try{
             System.out.println("lock start");
+
             lock.lock();
 
             System.out.println("exe testLock");
+
+            lock.isHeldByCurrentThread();
+
+            condition.await();
+            condition.signalAll();
+
             Thread.sleep(1000000);
         }catch (InterruptedException e){
             e.printStackTrace();
