@@ -62,7 +62,7 @@ public class CMS {
             all.add(new M1());
             i++;
             System.out.println(i);
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         }
     }
 }
