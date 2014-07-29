@@ -41,7 +41,7 @@ public class CMS {
     }
 
     /**
-     * -server -Xms30m -Xmx30m -XX:PermSize=10m -XX:MaxPermSize=10m -Xss128k -XX:-UseParallelOldGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+     * -server -Xms30m -Xmx30m -XX:PermSize=10m -XX:MaxPermSize=10m -Xss128k -XX:-UseParallelOldGC -XX:InitialTenuringThreshold=2 -XX:MaxTenuringThreshold=2 -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintHeapAtGC -XX:+PrintTenuringDistribution
      *
      * 按照默认值进行计算
      * （1）-XX:NewRatio      默认为2，则30m*1/3=10m
