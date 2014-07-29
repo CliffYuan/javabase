@@ -13,6 +13,10 @@ import java.util.List;
  */
 public class CMS {
 
+    private static final int _1KB = 1024;
+
+    private static final int _1MB = _1KB * 1024;
+
     /**
      * -server -Xms3g -Xmx3g -XX:PermSize=128m -XX:MaxPermSize=128m -Xss128k -XX:+UseConcMarkSweepGC -XX:CMSFullGCsBeforeCompaction=5 -XX:CMSInitiatingOccupancyFraction=50 -XX:CMSInitiatingPermOccupancyFraction=50 -XX:+UseCMSInitiatingOccupancyOnly -XX:+PrintGCDetails -XX:+PrintGCDateStamps
      *
@@ -65,6 +69,23 @@ public class CMS {
             Thread.sleep(5000);
         }
     }
+
+
+    /**
+     * -server -Xms30m -Xmx30m -XX:PermSize=10m -XX:MaxPermSize=10m -Xss256k -XX:-UseParallelOldGC -XX:InitialTenuringThreshold=2 -XX:MaxTenuringThreshold=2 -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintHeapAtGC -XX:+PrintTenuringDistribution
+     */
+    @Test
+    public void testParallelOldGC()throws Exception{
+        byte[] byte1=new byte[_1MB];
+        byte[] byte2=new byte[_1MB*5];
+        System.out.println("0");
+        byte[] byte3=new byte[_1MB*2];
+        System.out.println("1");
+        Thread.sleep(15000);
+        System.out.println("2"+byte1+byte2+byte3);
+    }
+
+
 }
 
 class M100{
