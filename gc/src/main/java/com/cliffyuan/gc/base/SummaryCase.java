@@ -13,6 +13,7 @@ import java.util.List;
  2)、在YGC执行后，平均晋升到old的大小 > 旧生代剩余空间大小 ? 触发Full GC ： 什么都不做。
 
  *
+ * http://bluedavy.me/?p=166
  */
 public class SummaryCase {
     public static void main(String[] args) throws Exception{
