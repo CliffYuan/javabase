@@ -11,7 +11,6 @@ package com.cliffyuan.gc.base;
  *           b.否则离死不远了
  *
  *
- * 
  * finalize方法总结：
  * 1）对象的finalize方法只会执行一次。
  * 2）并不保证finalize方法执行完成，只是触发该方法。
