@@ -10,6 +10,9 @@ import com.cliffyuan.gc.Object1M;
  * 1)Young:Old=1:2                 NewRatio设置，默认值2
  * 2)Survivor:Survivor：Eden=1:1:8 SurvivorRatio设置,默认值8
  *
+ *
+ * http://blog.csdn.net/ls5718/article/details/51777195
+ * 
  * Created by xnd on 18-3-21.
  */
 public class GCLog {
