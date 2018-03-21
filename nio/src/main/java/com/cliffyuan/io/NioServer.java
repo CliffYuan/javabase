@@ -66,7 +66,7 @@ public class NioServer {
         serverSocketChannel.bind(new InetSocketAddress(8080));
         SocketChannel socketChannel=null;
         while (true){
-            System.out.println("accept start");
+          //  System.out.println("accept start");
             socketChannel=serverSocketChannel.accept();
             if(socketChannel!=null){
                 System.out.println("socketChannel="+socketChannel);

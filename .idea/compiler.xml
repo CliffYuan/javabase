@@ -33,6 +33,17 @@
         <module name="unsafe" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="classloader" target="1.5" />
+      <module name="gc" target="1.5" />
+      <module name="javabase" target="1.5" />
+      <module name="jmx" target="1.5" />
+      <module name="juc" target="1.5" />
+      <module name="lock" target="1.5" />
+      <module name="memory" target="1.5" />
+      <module name="nio" target="1.5" />
+      <module name="threadpool2" target="1.5" />
+      <module name="unsafe" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
